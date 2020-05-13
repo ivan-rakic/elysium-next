@@ -1,0 +1,217 @@
+.cta__holder {
+  margin-top: -2.3rem;
+  background-image: url(./assets/images/header-back.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(10% 12%, 90% 12%, 100% 0, 100% 100%, 90% 88%, 10% 88%, 0 100%, 0 0);
+
+  @media only screen and (max-width: $bp-smallest) {
+    clip-path: polygon(10% 5%, 90% 5%, 100% 0, 100% 100%, 90% 95%, 10% 95%, 0 100%, 0 0);
+  }
+
+
+  &--shade {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+
+    @media only screen and (max-width: $bp-smallest) {
+      background: linear-gradient(
+        to bottom,
+        rgba($color-secondary-darker, 0.8) 0%,
+        rgba($color-secondary-darker, 0.4) 80%,
+        rgba($color-secondary-darker, 0.2) 100%
+      );
+    }
+
+    &-left {
+      flex: 0 0 70%;
+      text-align: center;
+      padding: 3.5rem 20rem 3.5rem 4rem;
+      background: linear-gradient(
+        135deg,
+        rgba($color-secondary-darker, 0) 0%,
+        rgba($color-secondary-dark, 0.1) 8%,
+        rgba($color-secondary-darker, 0.7) 25%,
+        rgba($color-secondary-darker, 0.7) 80%,
+        rgba($color-secondary-dark, 1) 80%,
+        rgba($color-secondary-darker, 1) 85%,
+        rgba(225, 225, 225, 0) 85%,
+        rgba(246, 246, 246, 0) 100%
+      );
+
+      @media only screen and (max-width: $bp-medium) {
+        flex: 0 0 100%;
+        background: linear-gradient(
+          to right,
+          rgba($color-secondary-darker, 0.9) 0%,
+          rgba($color-secondary-dark, 0.3) 85%,
+          rgba($color-secondary-darker, 0.1) 100%
+        );
+        width: 100%;
+        text-align: left;
+        padding: 3rem 25rem 3rem 1rem;
+      }
+
+      @media only screen and (max-width: $bp-smallest) {
+        padding: 3rem;
+        padding-bottom: 1rem;
+        text-align: center;
+        background: none;
+      }
+
+      & p {
+        padding-left: 6rem;
+        @media only screen and (max-width: $bp-medium) {
+          padding-left: 1rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+          padding-left: 0rem;
+        }
+      }
+    }
+
+    &-right {
+      display: flex;
+      justify-content: center;
+      padding-right: 6rem;
+
+      @media only screen and (max-width: $bp-medium) {
+        position: absolute;
+        bottom: 3rem;
+        right: 1rem;
+        padding-right: 4rem;
+        text-shadow: 0 0px 3px $color-black;
+      }
+
+      @media only screen and (max-width: 700px) {
+        bottom: 4.5rem;
+      }
+
+      @media only screen and (max-width: $bp-smallest) {
+        position: static;
+        padding-right: 0rem;
+        padding: 2rem 0 3.5rem 0;
+      }
+    }
+  }
+
+  & p {
+    font-size: $large-font-size;
+    font-family: "Euforia", "Blinker", sans-serif;
+    display: block;
+    color: $color-white;
+    letter-spacing: 1px;
+    text-shadow: 0 0px 5px $color-black;
+  }
+
+  .btn-tickets,
+  .btn-tickets:visited {
+    font-size: $large-font-size;
+    display: inline-block;
+    margin-left: 1rem;
+    margin-right: 2rem;
+    background-color: rgba($color-secondary-dark, 1);
+    border: 1px solid transparent;
+    color: $color-white;
+    transition: all 0.3s;
+    text-decoration: none;
+    transform: skewX(135deg);
+    box-shadow: 9px 6px 5px rgba($color-black, 0.8);
+
+    @media only screen and (min-width: 1400px) {
+      margin-left: 3rem;
+      margin-right: 3rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      transform: skewX(0deg);
+      margin-right: 1rem;
+      box-shadow: 0px 2px 5px rgba($color-black, 0.6);
+      border-radius: 10px;
+    }
+
+    p {
+      font-family: "CocoBikeR", "Euforia", "Blinker", sans-serif;
+      padding: 1.6rem 4rem;
+      transform: skewX(-135deg);
+      font-size: $large-font-size;
+
+      @media only screen and (min-width: 1400px) {
+        padding: 1.6rem 5rem;
+      }
+
+      @media only screen and (max-width: $bp-smallest) {
+        transform: skewX(0deg);
+      }
+    }
+
+    &:hover {
+      background-color: rgba($color-secondary-darker, 1);
+      color: $color-black;
+      transform: skewX(135deg) translateY(-1px);
+
+      @media only screen and (max-width: $bp-smallest) {
+        transform: skewX(0deg);
+      }
+    }
+
+    &:active {
+      transform: skewX(135deg) translateY(3px);
+
+      @media only screen and (max-width: $bp-smallest) {
+        transform: skewX(0deg) translateY(3px);
+      }
+    }
+  }
+}
+
+// ------------------- MAIN HOME
+
+.home-back {
+  margin-top: -2.3rem;
+  padding: 0 1rem;
+  box-sizing: border-box;
+  // background-image: linear-gradient(
+  //     to bottom,
+  //     rgba($color-primary-bleak, 1) 0%,
+  //     rgba($color-primary-dark, 0.8) 50%,
+  //     rgba($color-primary-bleak, 1) 100%
+  //   ),
+  //   url("https://www.transparenttextures.com/patterns/shattered-dark.png");
+  background-image: url(./assets/images/abstract-background2.png);
+  background-color: #1a1a1a;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.main-home {
+  font-size: $big-font-size;
+  margin: 0 1rem;
+}
+
+.welcome__holder {
+  position: relative;
+  font-family: "Euforia", "Blinker", sans-serif;
+  font-size: 5rem;
+  
+
+  @media only screen and (max-width: $bp-small) {
+    font-size: 4rem;
+  }
+
+  &--content {
+    text-align: center;
+    color: $color-primary-light;
+
+    & p {
+      color: $color-white;
+      font-size: $large-font-size;
+    }
+  }
+}

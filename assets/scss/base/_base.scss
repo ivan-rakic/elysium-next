@@ -1,0 +1,36 @@
+// Units for responsive values --- START
+
+$bp-largest: 75em; // 1200px in em units
+$bp-large: 68.75em; // 1100px in em units
+$bp-medium: 56.25em; // 900px in em units
+$bp-small: 37.5em; // 600px in em units
+$bp-smallest: 31.25em; // 500px in em units
+
+// Units for responsive values --- END
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    font-size: 50%;
+  }
+  scroll-behavior: smooth;
+}
+
+body {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: $color-primary-darker;
+  color: $color-white;
+  text-shadow: none;
+}
